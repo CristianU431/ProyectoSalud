@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bdSalud" Class="dcLoginDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=bdSalud;Integrated Security=True" SettingsObjectName="CapaDato.Properties.Settings" SettingsPropertyName="bdSaludConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TLogin" Member="Login">
+    <Type Name="Login">
+      <Column Name="IdLoguin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contrasenia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rol" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CodPaciente" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CodMedico" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="TMedico_TLogin" Member="Medico" ThisKey="CodMedico" OtherKey="CodMedico" Type="Medico" IsForeignKey="true" />
+      <Association Name="TPaciente_TLogin" Member="Paciente" ThisKey="CodPaciente" OtherKey="Dni" Type="Paciente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TMedico" Member="Medico">
+    <Type Name="Medico">
+      <Column Name="CodMedico" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreMedico" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="ApellidoMedico" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="IdEspecialidad" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="TMedico_TLogin" Member="Login" ThisKey="CodMedico" OtherKey="CodMedico" Type="Login" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TPaciente" Member="Paciente">
+    <Type Name="Paciente">
+      <Column Name="Dni" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombrePaciente" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="ApellidoPaciente" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Genero" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNacimiento" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="TPaciente_TLogin" Member="Login" ThisKey="Dni" OtherKey="CodPaciente" Type="Login" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Intranet/Intranet.Master" AutoEventWireup="true" CodeBehind="MPLaboratorio.master.cs" Inherits="ClienteSalud.Intranet.Laboratorio.MPLaboratorio" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contenidoMenuContextual" runat="server">
+
+    <ul id = "menuContextual">
+        <li><a href="LaboratorioListar.aspx">Listar Analisis de Laboratorio</a></li>
+        <li><a href="LaboratorioDatos.aspx">Administrar Analisis de Laboratorio</a></li>
+        <li><a href="LaboratorioBuscar.aspx">Buscar Analisis de Laboratorio</a></li>
+    </ul>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contendoPrincipal" runat="server">
+
+    <asp:ContentPlaceHolder ID="contendoPrincipal" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</asp:Content>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dcLogin">
+  <DataContextMoniker Name="/dcLoginDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bed8e70b-5225-40d1-b436-ab86dd07f084" absoluteBounds="3.5, 0.875, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/dcLoginDataContext/Login" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14c4c66b-4e33-4d5a-9a71-80b092e97f58" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f42cce9-c501-4001-9c02-0641687cf1a6" absoluteBounds="0.75, 1.125, 2, 1.5785953776041663">
+      <DataClassMoniker Name="/dcLoginDataContext/Medico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09c53b84-0871-4983-b1c7-a8bf560172e7" absoluteBounds="0.765, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f344bcce-62f4-4ff5-a19e-8d5015a07416" absoluteBounds="0.75, 3.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/dcLoginDataContext/Paciente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0cf4af3-b119-4f77-815d-164257df40e0" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.91429768880208); (3.5 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dcLoginDataContext/Medico/TMedico_TLogin" />
+      <nodes>
+        <classShapeMoniker Id="2f42cce9-c501-4001-9c02-0641687cf1a6" />
+        <classShapeMoniker Id="bed8e70b-5225-40d1-b436-ab86dd07f084" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.85659912109375); (4.5 : 4.85659912109375); (4.5 : 2.8381982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dcLoginDataContext/Paciente/TPaciente_TLogin" />
+      <nodes>
+        <classShapeMoniker Id="f344bcce-62f4-4ff5-a19e-8d5015a07416" />
+        <classShapeMoniker Id="bed8e70b-5225-40d1-b436-ab86dd07f084" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

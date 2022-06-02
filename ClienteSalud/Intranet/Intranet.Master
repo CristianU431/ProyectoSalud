@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Intranet.master.cs" Inherits="ClienteSalud.Intranet.Intranet" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" href="/Imagenes/estilos.css"/>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <div id="cabecera">
+                <div id="contenidoCabecera">
+                    <div id="barraHorizontal">
+                        <ul>
+                            <li><a href="/Intranet/InicioAdmin.aspx">Home</a></li>
+                            <li><a href="/Intranet/Consultorio/ConsultorioListar.aspx">Consultorio</a></li>
+                            <li><a href="/Intranet/Especialidad/EspecialidadListar.aspx">Especialidad</a></li>
+                            <li><a href="/Intranet/Historial/HistorialListar.aspx">Historial</a></li>
+                            <li><a href="/Intranet/Laboratorio/LaboratorioListar.aspx">Analisis Laboratorio</a></li>
+                            <li><a href="/Intranet/Medicamentos/MedicamentosListar.aspx">Medicamentos</a></li>
+                            <li><a href="/Intranet/Medico/MedicoListar.aspx">Medico</a></li>
+                            <li><a href="/Intranet/Paciente/PacienteListar.aspx">Paciente</a></li>
+                            <li><a href="/Intranet/Receta/RecetaListar.aspx">Receta</a></li>
+                            <li><a href="/Intranet/Triaje/TriajeListar.aspx">Triaje</a></li>
+                            <li><p><asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut"/></p></li>
+                        </ul>
+                    </div>
+                    <div id="logotipo">
+                        <img src="/../Imagenes/img98x98.png" alt="logo Posta Medica"/>
+                    </div>
+                    <div id="titulo">
+                        <h1>Posta Medica San Jeronimo Cusco</h1>
+                        <h2>Bienvenido</h2>
+                    </div>
+                </div>
+            </div>
+
+             <div id="bajo">
+                <div id="columnIzq">
+                    <asp:ContentPlaceHolder ID="contenidoMenuContextual" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="columnCentro">    
+                    <asp:ContentPlaceHolder ID="contendoPrincipal" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="columnDer">
+
+                </div>
+                <div id="pie">
+                    <span>Sistema Web - Metal Family</span>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

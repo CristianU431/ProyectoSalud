@@ -1,0 +1,739 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2221DE4A-124C-4B4F-BE06-E92175CCDAF2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClienteSalud</RootNamespace>
+    <AssemblyName>ClienteSalud</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44378</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\scss\abstracts\_mixins.scss" />
+    <Content Include="assets\scss\abstracts\_utilities.scss" />
+    <Content Include="assets\scss\abstracts\_variables.scss" />
+    <Content Include="assets\scss\base\_reset.scss" />
+    <Content Include="assets\scss\base\_typography.scss" />
+    <Content Include="assets\scss\components\_buttons.scss" />
+    <Content Include="assets\scss\components\_forms.scss" />
+    <Content Include="assets\scss\components\_list.scss" />
+    <Content Include="assets\scss\components\_navbar.scss" />
+    <Content Include="assets\scss\components\_pagination.scss" />
+    <Content Include="assets\scss\components\_progressbar.scss" />
+    <Content Include="assets\scss\components\_table.scss" />
+    <Content Include="assets\scss\layout\_header.scss" />
+    <Content Include="assets\scss\layout\_sections.scss" />
+    <Content Include="assets\scss\pigga.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_alert.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_background-variant.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_badge.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_border-radius.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_box-shadow.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_breakpoints.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_buttons.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_caret.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_clearfix.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_deprecate.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_float.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_forms.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_gradients.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_grid-framework.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_grid.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_hover.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_image.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_list-group.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_lists.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_nav-divider.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_pagination.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_reset-text.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_resize.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_screen-reader.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_size.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_table-row.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_text-emphasis.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_text-hide.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_text-truncate.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_transition.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\mixins\_visibility.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_align.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_background.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_borders.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_clearfix.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_display.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_embed.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_flex.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_float.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_overflow.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_position.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_screenreaders.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_shadows.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_sizing.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_spacing.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_stretched-link.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_text.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\utilities\_visibility.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\vendor\_rfs.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_alert.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_badge.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_breadcrumb.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_button-group.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_buttons.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_card.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_carousel.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_close.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_code.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_custom-forms.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_dropdown.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_forms.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_functions.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_grid.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_images.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_input-group.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_jumbotron.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_list-group.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_media.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_mixins.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_modal.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_nav.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_navbar.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_pagination.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_popover.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_print.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_progress.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_reboot.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_root.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_spinners.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_tables.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_toasts.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_tooltip.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_transitions.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_type.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_utilities.scss" />
+    <Content Include="assets\scss\vendors\bootstrap-4.3.1\_variables.scss" />
+    <Content Include="assets\vendors\bootstrap\bootstrap.bundle.js.map" />
+    <Content Include="assets\vendors\bootstrap\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\vendors\bootstrap\bootstrap.js.map" />
+    <Content Include="assets\vendors\bootstrap\bootstrap.min.js.map" />
+    <Content Include="assets\vendors\jquery\jquery-3.4.1.min.map" />
+    <Content Include="assets\vendors\jquery\jquery-3.4.1.slim.min.map" />
+    <Content Include="assets\vendors\themify-icons\fonts\themify.eot" />
+    <Content Include="assets\vendors\themify-icons\fonts\themify.ttf" />
+    <Content Include="assets\vendors\themify-icons\fonts\themify.woff" />
+    <None Include="Connected Services\srConsultorio\wsConsultorio.disco" />
+    <None Include="Connected Services\srConsultorio\configuration91.svcinfo" />
+    <None Include="Connected Services\srConsultorio\configuration.svcinfo" />
+    <None Include="Connected Services\srConsultorio\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\srEspecialidad\wsEspecialidad.disco" />
+    <None Include="Connected Services\srEspecialidad\configuration91.svcinfo" />
+    <None Include="Connected Services\srEspecialidad\configuration.svcinfo" />
+    <None Include="Connected Services\srEspecialidad\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\srHistorial\wsHistorial.disco" />
+    <None Include="Connected Services\srHistorial\configuration91.svcinfo" />
+    <None Include="Connected Services\srHistorial\configuration.svcinfo" />
+    <None Include="Connected Services\srHistorial\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\srLaboratorio\wsLaboratorio.disco" />
+    <None Include="Connected Services\srLaboratorio\configuration91.svcinfo" />
+    <None Include="Connected Services\srLaboratorio\configuration.svcinfo" />
+    <None Include="Connected Services\srLaboratorio\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\srMedicamentos\wsMedicamentos.disco" />
+    <None Include="Connected Services\srMedicamentos\configuration91.svcinfo" />
+    <None Include="Connected Services\srMedicamentos\configuration.svcinfo" />
+    <None Include="Connected Services\srMedicamentos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\srMedico\wsMedico.disco" />
+    <None Include="Connected Services\srMedico\configuration91.svcinfo" />
+    <None Include="Connected Services\srMedico\configuration.svcinfo" />
+    <None Include="Connected Services\srMedico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\srPaciente\wsPaciente.disco" />
+    <None Include="Connected Services\srPaciente\configuration91.svcinfo" />
+    <None Include="Connected Services\srPaciente\configuration.svcinfo" />
+    <None Include="Connected Services\srPaciente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\srReceta\wsReceta.disco" />
+    <None Include="Connected Services\srReceta\configuration91.svcinfo" />
+    <None Include="Connected Services\srReceta\configuration.svcinfo" />
+    <None Include="Connected Services\srReceta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\srTriaje\wsTriaje.disco" />
+    <None Include="Connected Services\srTriaje\configuration91.svcinfo" />
+    <None Include="Connected Services\srTriaje\configuration.svcinfo" />
+    <None Include="Connected Services\srTriaje\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="App_Themes\Tema1\estilos.css" />
+    <Content Include="assets\css\pigga.css" />
+    <Content Include="assets\imgs\centro.jpg" />
+    <Content Include="assets\imgs\director.JPG" />
+    <Content Include="assets\imgs\gerente.JPG" />
+    <Content Include="assets\imgs\headers.jpg" />
+    <Content Include="assets\imgs\logo.png" />
+    <Content Include="assets\imgs\logo.svg" />
+    <Content Include="assets\imgs\navbar-brand.png" />
+    <Content Include="assets\imgs\navbar-brand.svg" />
+    <Content Include="assets\imgs\organigrama.jpg" />
+    <Content Include="assets\imgs\section.jpg" />
+    <Content Include="assets\imgs\style-1.png" />
+    <Content Include="assets\imgs\style-2.png" />
+    <Content Include="assets\imgs\style-3.png" />
+    <Content Include="assets\imgs\style-4.png" />
+    <Content Include="assets\js\pigga.js" />
+    <Content Include="assets\vendors\bootstrap\bootstrap.affix.js" />
+    <Content Include="assets\vendors\bootstrap\bootstrap.bundle.js" />
+    <Content Include="assets\vendors\bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="assets\vendors\bootstrap\bootstrap.js" />
+    <Content Include="assets\vendors\bootstrap\bootstrap.min.js" />
+    <Content Include="assets\vendors\jquery\jquery-3.4.1.js" />
+    <Content Include="assets\vendors\jquery\jquery-3.4.1.min.js" />
+    <Content Include="assets\vendors\jquery\jquery-3.4.1.slim.js" />
+    <Content Include="assets\vendors\jquery\jquery-3.4.1.slim.min.js" />
+    <Content Include="assets\vendors\themify-icons\css\themify-icons.css" />
+    <Content Include="assets\vendors\themify-icons\fonts\themify.svg" />
+    <Content Include="frmLogin.aspx" />
+    <Content Include="gulpfile.js" />
+    <Content Include="Imagenes\estilos.css" />
+    <Content Include="Imagenes\img5.jpg" />
+    <Content Include="Imagenes\img98x98.png" />
+    <Content Include="Intranet\Consultorio\ConsultorioBuscar.aspx" />
+    <Content Include="Intranet\Consultorio\ConsultorioDatos.aspx" />
+    <Content Include="Intranet\Consultorio\ConsultorioListar.aspx" />
+    <Content Include="Intranet\Especialidad\EspecialidadBuscar.aspx" />
+    <Content Include="Intranet\Especialidad\EspecialidadDatos.aspx" />
+    <Content Include="Intranet\Especialidad\EspecialidadListar.aspx" />
+    <Content Include="Intranet\Historial\HistorialBuscar.aspx" />
+    <Content Include="Intranet\Historial\HistorialDatos.aspx" />
+    <Content Include="Intranet\Historial\HistorialListar.aspx" />
+    <Content Include="Intranet\InicioAdmin.aspx" />
+    <Content Include="Intranet\Laboratorio\LaboratorioBuscar.aspx" />
+    <Content Include="Intranet\Laboratorio\LaboratorioDatos.aspx" />
+    <Content Include="Intranet\Laboratorio\LaboratorioListar.aspx" />
+    <Content Include="Intranet\Medicamentos\MedicamentosBuscar.aspx" />
+    <Content Include="Intranet\Medicamentos\MedicamentosDatos.aspx" />
+    <Content Include="Intranet\Medicamentos\MedicamentosListar.aspx" />
+    <Content Include="Intranet\Medico\MedicoBuscar.aspx" />
+    <Content Include="Intranet\Medico\MedicoDatos.aspx" />
+    <Content Include="Intranet\Medico\MedicoListar.aspx" />
+    <Content Include="Intranet\Paciente\PacienteBuscar.aspx" />
+    <Content Include="Intranet\Paciente\PacienteDatos.aspx" />
+    <Content Include="Intranet\Paciente\PacienteListar.aspx" />
+    <Content Include="Intranet\Receta\RecetaBuscar.aspx" />
+    <Content Include="Intranet\Receta\RecetaDatos.aspx" />
+    <Content Include="Intranet\Receta\RecetaListar.aspx" />
+    <Content Include="Intranet\Triaje\TriajeBuscar.aspx" />
+    <Content Include="Intranet\Triaje\TriajeDatos.aspx" />
+    <Content Include="Intranet\Triaje\TriajeListar.aspx" />
+    <Content Include="Presentacion.aspx" />
+    <Content Include="script.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\srConsultorio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\srEspecialidad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\srHistorial\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\srLaboratorio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\srMedicamentos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\srMedico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\srPaciente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\srReceta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\srTriaje\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Consultorio\ConsultorioBuscar.aspx.cs">
+      <DependentUpon>ConsultorioBuscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Consultorio\ConsultorioBuscar.aspx.designer.cs">
+      <DependentUpon>ConsultorioBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Consultorio\ConsultorioDatos.aspx.cs">
+      <DependentUpon>ConsultorioDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Consultorio\ConsultorioDatos.aspx.designer.cs">
+      <DependentUpon>ConsultorioDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Consultorio\ConsultorioListar.aspx.cs">
+      <DependentUpon>ConsultorioListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Consultorio\ConsultorioListar.aspx.designer.cs">
+      <DependentUpon>ConsultorioListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Consultorio\MPConsultorio.master.cs">
+      <DependentUpon>MPConsultorio.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Consultorio\MPConsultorio.master.designer.cs">
+      <DependentUpon>MPConsultorio.master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Especialidad\EspecialidadBuscar.aspx.cs">
+      <DependentUpon>EspecialidadBuscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Especialidad\EspecialidadBuscar.aspx.designer.cs">
+      <DependentUpon>EspecialidadBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Especialidad\EspecialidadDatos.aspx.cs">
+      <DependentUpon>EspecialidadDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Especialidad\EspecialidadDatos.aspx.designer.cs">
+      <DependentUpon>EspecialidadDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Especialidad\EspecialidadListar.aspx.cs">
+      <DependentUpon>EspecialidadListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Especialidad\EspecialidadListar.aspx.designer.cs">
+      <DependentUpon>EspecialidadListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Especialidad\MPEspecialidad.master.cs">
+      <DependentUpon>MPEspecialidad.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Especialidad\MPEspecialidad.master.designer.cs">
+      <DependentUpon>MPEspecialidad.master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Historial\HistorialBuscar.aspx.cs">
+      <DependentUpon>HistorialBuscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Historial\HistorialBuscar.aspx.designer.cs">
+      <DependentUpon>HistorialBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Historial\HistorialDatos.aspx.cs">
+      <DependentUpon>HistorialDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Historial\HistorialDatos.aspx.designer.cs">
+      <DependentUpon>HistorialDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Historial\HistorialListar.aspx.cs">
+      <DependentUpon>HistorialListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Historial\HistorialListar.aspx.designer.cs">
+      <DependentUpon>HistorialListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Historial\MPHistorial.master.cs">
+      <DependentUpon>MPHistorial.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Historial\MPHistorial.master.designer.cs">
+      <DependentUpon>MPHistorial.master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\InicioAdmin.aspx.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\InicioAdmin.aspx.designer.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Intranet.Master.cs">
+      <DependentUpon>Intranet.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Intranet.Master.designer.cs">
+      <DependentUpon>Intranet.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Laboratorio\LaboratorioBuscar.aspx.cs">
+      <DependentUpon>LaboratorioBuscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Laboratorio\LaboratorioBuscar.aspx.designer.cs">
+      <DependentUpon>LaboratorioBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Laboratorio\LaboratorioDatos.aspx.cs">
+      <DependentUpon>LaboratorioDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Laboratorio\LaboratorioDatos.aspx.designer.cs">
+      <DependentUpon>LaboratorioDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Laboratorio\LaboratorioListar.aspx.cs">
+      <DependentUpon>LaboratorioListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Laboratorio\LaboratorioListar.aspx.designer.cs">
+      <DependentUpon>LaboratorioListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Laboratorio\MPLaboratorio.master.cs">
+      <DependentUpon>MPLaboratorio.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Laboratorio\MPLaboratorio.master.designer.cs">
+      <DependentUpon>MPLaboratorio.master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Medicamentos\MedicamentosBuscar.aspx.cs">
+      <DependentUpon>MedicamentosBuscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Medicamentos\MedicamentosBuscar.aspx.designer.cs">
+      <DependentUpon>MedicamentosBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Medicamentos\MedicamentosDatos.aspx.cs">
+      <DependentUpon>MedicamentosDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Medicamentos\MedicamentosDatos.aspx.designer.cs">
+      <DependentUpon>MedicamentosDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Medicamentos\MedicamentosListar.aspx.cs">
+      <DependentUpon>MedicamentosListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Medicamentos\MedicamentosListar.aspx.designer.cs">
+      <DependentUpon>MedicamentosListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Medicamentos\MPMedicamentos.master.cs">
+      <DependentUpon>MPMedicamentos.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Medicamentos\MPMedicamentos.master.designer.cs">
+      <DependentUpon>MPMedicamentos.master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Medico\MedicoBuscar.aspx.cs">
+      <DependentUpon>MedicoBuscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Medico\MedicoBuscar.aspx.designer.cs">
+      <DependentUpon>MedicoBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Medico\MedicoDatos.aspx.cs">
+      <DependentUpon>MedicoDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Medico\MedicoDatos.aspx.designer.cs">
+      <DependentUpon>MedicoDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Medico\MedicoListar.aspx.cs">
+      <DependentUpon>MedicoListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Medico\MedicoListar.aspx.designer.cs">
+      <DependentUpon>MedicoListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Medico\MPMedico.master.cs">
+      <DependentUpon>MPMedico.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Medico\MPMedico.master.designer.cs">
+      <DependentUpon>MPMedico.master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Paciente\MPPaciente.master.cs">
+      <DependentUpon>MPPaciente.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Paciente\MPPaciente.master.designer.cs">
+      <DependentUpon>MPPaciente.master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Paciente\PacienteBuscar.aspx.cs">
+      <DependentUpon>PacienteBuscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Paciente\PacienteBuscar.aspx.designer.cs">
+      <DependentUpon>PacienteBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Paciente\PacienteDatos.aspx.cs">
+      <DependentUpon>PacienteDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Paciente\PacienteDatos.aspx.designer.cs">
+      <DependentUpon>PacienteDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Paciente\PacienteListar.aspx.cs">
+      <DependentUpon>PacienteListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Paciente\PacienteListar.aspx.designer.cs">
+      <DependentUpon>PacienteListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Receta\MPReceta.master.cs">
+      <DependentUpon>MPReceta.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Receta\MPReceta.master.designer.cs">
+      <DependentUpon>MPReceta.master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Receta\RecetaBuscar.aspx.cs">
+      <DependentUpon>RecetaBuscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Receta\RecetaBuscar.aspx.designer.cs">
+      <DependentUpon>RecetaBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Receta\RecetaDatos.aspx.cs">
+      <DependentUpon>RecetaDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Receta\RecetaDatos.aspx.designer.cs">
+      <DependentUpon>RecetaDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Receta\RecetaListar.aspx.cs">
+      <DependentUpon>RecetaListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Receta\RecetaListar.aspx.designer.cs">
+      <DependentUpon>RecetaListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Triaje\MPTriaje.master.cs">
+      <DependentUpon>MPTriaje.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Triaje\MPTriaje.master.designer.cs">
+      <DependentUpon>MPTriaje.master</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Triaje\TriajeBuscar.aspx.cs">
+      <DependentUpon>TriajeBuscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Triaje\TriajeBuscar.aspx.designer.cs">
+      <DependentUpon>TriajeBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Triaje\TriajeDatos.aspx.cs">
+      <DependentUpon>TriajeDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Triaje\TriajeDatos.aspx.designer.cs">
+      <DependentUpon>TriajeDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intranet\Triaje\TriajeListar.aspx.cs">
+      <DependentUpon>TriajeListar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intranet\Triaje\TriajeListar.aspx.designer.cs">
+      <DependentUpon>TriajeListar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion.aspx.cs">
+      <DependentUpon>Presentacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion.aspx.designer.cs">
+      <DependentUpon>Presentacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Intranet\Web.config" />
+    <Content Include="Intranet\Intranet.Master" />
+    <None Include="Connected Services\srConsultorio\wsConsultorio.wsdl" />
+    <None Include="Connected Services\srEspecialidad\wsEspecialidad.wsdl" />
+    <None Include="Connected Services\srHistorial\wsHistorial.wsdl" />
+    <None Include="Connected Services\srLaboratorio\wsLaboratorio.wsdl" />
+    <None Include="Connected Services\srMedicamentos\wsMedicamentos.wsdl" />
+    <None Include="Connected Services\srMedico\wsMedico.wsdl" />
+    <None Include="Connected Services\srPaciente\wsPaciente.wsdl" />
+    <None Include="Connected Services\srReceta\wsReceta.wsdl" />
+    <None Include="Connected Services\srTriaje\wsTriaje.wsdl" />
+    <Content Include="Intranet\Consultorio\MPConsultorio.master" />
+    <Content Include="Intranet\Especialidad\MPEspecialidad.master" />
+    <Content Include="Intranet\Historial\MPHistorial.master" />
+    <Content Include="Intranet\Laboratorio\MPLaboratorio.master" />
+    <Content Include="Intranet\Medicamentos\MPMedicamentos.master" />
+    <Content Include="Intranet\Medico\MPMedico.master" />
+    <Content Include="Intranet\Paciente\MPPaciente.master" />
+    <Content Include="Intranet\Receta\MPReceta.master" />
+    <Content Include="Intranet\Triaje\MPTriaje.master" />
+    <Content Include="package.json" />
+    <None Include="packages.config" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Site.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\srConsultorio\" />
+    <WCFMetadataStorage Include="Connected Services\srEspecialidad\" />
+    <WCFMetadataStorage Include="Connected Services\srHistorial\" />
+    <WCFMetadataStorage Include="Connected Services\srLaboratorio\" />
+    <WCFMetadataStorage Include="Connected Services\srMedicamentos\" />
+    <WCFMetadataStorage Include="Connected Services\srMedico\" />
+    <WCFMetadataStorage Include="Connected Services\srPaciente\" />
+    <WCFMetadataStorage Include="Connected Services\srReceta\" />
+    <WCFMetadataStorage Include="Connected Services\srTriaje\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDato\CapaDato.csproj">
+      <Project>{2b3d807b-5a51-4316-b0db-62e8292af50c}</Project>
+      <Name>CapaDato</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{75d5b4ff-e8cc-4b3b-b173-ca02239a7038}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58119</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44378/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

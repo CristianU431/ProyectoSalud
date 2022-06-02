@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Intranet/Intranet.Master" AutoEventWireup="true" CodeBehind="MPHistorial.master.cs" Inherits="ClienteSalud.Intranet.Historial.MPHistorial" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contenidoMenuContextual" runat="server">
+
+    <ul id = "menuContextual">
+        <li><a href="HistorialListar.aspx">Listar Historial</a></li>
+        <li><a href="HistorialDatos.aspx">Administrar Historial</a></li>
+        <li><a href="HistorialBuscar.aspx">Buscar Historial</a></li>
+    </ul>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contendoPrincipal" runat="server">
+
+    <asp:ContentPlaceHolder ID="contendoPrincipal" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</asp:Content>
